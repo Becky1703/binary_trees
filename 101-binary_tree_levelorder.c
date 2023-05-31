@@ -2,6 +2,12 @@
 #include <stdlib.h>
 #include "binary_trees.h"
 
+queue_node_t *create_queue_node(struct binary_tree_s *node);
+void enqueue(queue_t *queue, struct binary_tree_s *node);
+struct binary_tree_s *dequeue(queue_t *queue);
+int is_empty(queue_t *queue);
+void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
+
 /**
  * create_queue_node - function creates a new queue node and
  * assigns the given ninary tree node to it
